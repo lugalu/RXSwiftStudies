@@ -8,11 +8,24 @@
 import UIKit
 
 class MALViewController: UIViewController {
-
+    let viewModel: MALViewModel
+    
+    init(viewModel: MALViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+        
+    }
+    
+    required init?(coder: NSCoder) {
+        self.viewModel = MALViewModel()
+        super.init(coder: coder)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+       
     }
     
 
@@ -26,4 +39,8 @@ class MALViewController: UIViewController {
     }
     */
 
+}
+
+extension MALViewController: UICollectionViewDelegate{
+    
 }

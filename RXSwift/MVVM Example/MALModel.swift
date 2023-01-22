@@ -5,4 +5,12 @@
 //  Created by Lugalu on 22/01/23.
 //
 
-import Foundation
+import UIKit
+
+struct MALResponse: Decodable{
+    
+}
+
+class MALModel{
+    
+}
