@@ -10,8 +10,7 @@ import RxCocoa
 import RxSwift
 import MapKit
 
-//BlackJack
-class ViewController: UIViewController {
+class MapsViewController: UIViewController {
     
     let disposeBag: DisposeBag = DisposeBag()
     let map: MKMapView = MKMapView()
@@ -78,7 +77,7 @@ class ViewController: UIViewController {
 
 
 
-extension ViewController: MKMapViewDelegate{
+extension MapsViewController: MKMapViewDelegate{
     
     
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
@@ -96,7 +95,7 @@ extension ViewController: MKMapViewDelegate{
 }
 
 
-extension ViewController: CLLocationManagerDelegate{
+extension MapsViewController: CLLocationManagerDelegate{
     
     func askForPermission(){
         
