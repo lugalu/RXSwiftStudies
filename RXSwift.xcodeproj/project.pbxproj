@@ -13,6 +13,12 @@
 		094D7158296F7A2000044538 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 094D7156296F7A2000044538 /* Main.storyboard */; };
 		094D715A296F7A2200044538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 094D7159296F7A2200044538 /* Assets.xcassets */; };
 		094D715D296F7A2200044538 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 094D715B296F7A2200044538 /* LaunchScreen.storyboard */; };
+		0976930D297DF8D30018A3D6 /* MALViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976930C297DF8D30018A3D6 /* MALViewController.swift */; };
+		0976930F297DF8DF0018A3D6 /* MALViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976930E297DF8DF0018A3D6 /* MALViewModel.swift */; };
+		09769311297DF8E70018A3D6 /* MALModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09769310297DF8E70018A3D6 /* MALModel.swift */; };
+		09769313297E001E0018A3D6 /* MALCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09769312297E001E0018A3D6 /* MALCollectionViewCell.swift */; };
+		09769315297E06A90018A3D6 /* MALViewController + Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09769314297E06A90018A3D6 /* MALViewController + Constraints.swift */; };
+		09769317297E06C60018A3D6 /* MALViewController + Delegate Data Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09769316297E06C60018A3D6 /* MALViewController + Delegate Data Source.swift */; };
 		09CB5D7D297219420044463D /* Observables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CB5D7C297219420044463D /* Observables.swift */; };
 		09CB5D7F29721A6E0044463D /* Subjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CB5D7E29721A6E0044463D /* Subjects.swift */; };
 		09CB5D81297611AE0044463D /* Relays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CB5D80297611AE0044463D /* Relays.swift */; };
@@ -29,6 +35,12 @@
 		094D7159296F7A2200044538 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		094D715C296F7A2200044538 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		094D715E296F7A2200044538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0976930C297DF8D30018A3D6 /* MALViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MALViewController.swift; sourceTree = "<group>"; };
+		0976930E297DF8DF0018A3D6 /* MALViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MALViewModel.swift; sourceTree = "<group>"; };
+		09769310297DF8E70018A3D6 /* MALModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MALModel.swift; sourceTree = "<group>"; };
+		09769312297E001E0018A3D6 /* MALCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MALCollectionViewCell.swift; sourceTree = "<group>"; };
+		09769314297E06A90018A3D6 /* MALViewController + Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MALViewController + Constraints.swift"; sourceTree = "<group>"; };
+		09769316297E06C60018A3D6 /* MALViewController + Delegate Data Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MALViewController + Delegate Data Source.swift"; sourceTree = "<group>"; };
 		09CB5D7C297219420044463D /* Observables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observables.swift; sourceTree = "<group>"; };
 		09CB5D7E29721A6E0044463D /* Subjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subjects.swift; sourceTree = "<group>"; };
 		09CB5D80297611AE0044463D /* Relays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relays.swift; sourceTree = "<group>"; };
@@ -71,7 +83,7 @@
 		094D714F296F7A2000044538 /* RXSwift */ = {
 			isa = PBXGroup;
 			children = (
-				09CB5D842979FEA20044463D /* Map */,
+				0976930B297DF8A80018A3D6 /* MVVM Example */,
 				094D7150296F7A2000044538 /* AppDelegate.swift */,
 				094D7152296F7A2000044538 /* SceneDelegate.swift */,
 				094D7154296F7A2000044538 /* MapsViewController.swift */,
@@ -87,11 +99,17 @@
 			path = RXSwift;
 			sourceTree = "<group>";
 		};
-		09CB5D842979FEA20044463D /* Map */ = {
+		0976930B297DF8A80018A3D6 /* MVVM Example */ = {
 			isa = PBXGroup;
 			children = (
+				0976930C297DF8D30018A3D6 /* MALViewController.swift */,
+				0976930E297DF8DF0018A3D6 /* MALViewModel.swift */,
+				09769310297DF8E70018A3D6 /* MALModel.swift */,
+				09769312297E001E0018A3D6 /* MALCollectionViewCell.swift */,
+				09769314297E06A90018A3D6 /* MALViewController + Constraints.swift */,
+				09769316297E06C60018A3D6 /* MALViewController + Delegate Data Source.swift */,
 			);
-			path = Map;
+			path = "MVVM Example";
 			sourceTree = "<group>";
 		};
 		7C84586970A8203507F5E33E /* Frameworks */ = {
@@ -227,12 +245,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				09CB5D7D297219420044463D /* Observables.swift in Sources */,
+				0976930F297DF8DF0018A3D6 /* MALViewModel.swift in Sources */,
+				09769311297DF8E70018A3D6 /* MALModel.swift in Sources */,
 				094D7155296F7A2000044538 /* MapsViewController.swift in Sources */,
+				09769317297E06C60018A3D6 /* MALViewController + Delegate Data Source.swift in Sources */,
+				09769315297E06A90018A3D6 /* MALViewController + Constraints.swift in Sources */,
 				09CB5D832979FE9A0044463D /* BlackJackViewController.swift in Sources */,
+				0976930D297DF8D30018A3D6 /* MALViewController.swift in Sources */,
 				094D7151296F7A2000044538 /* AppDelegate.swift in Sources */,
 				094D7153296F7A2000044538 /* SceneDelegate.swift in Sources */,
 				09CB5D7F29721A6E0044463D /* Subjects.swift in Sources */,
 				09CB5D81297611AE0044463D /* Relays.swift in Sources */,
+				09769313297E001E0018A3D6 /* MALCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

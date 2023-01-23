@@ -10,9 +10,25 @@ import UIKit
 class MALViewController: UIViewController {
     let viewModel: MALViewModel
     
+    let carrousel: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        
+        collection.translatesAutoresizingMaskIntoConstraints = false
+        collection.register(MALCollectionViewCell.self, forCellWithReuseIdentifier: "CarrouselCell")
+        
+        return collection
+    }()
+    
+    
     init(viewModel: MALViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        
+        carrousel.delegate = self
+        carrousel.dataSource = self
+        carrousel.backgroundColor = .red
+        self.setupViews()
         
     }
     
@@ -24,23 +40,8 @@ class MALViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       
+        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
-extension MALViewController: UICollectionViewDelegate{
-    
-}
+

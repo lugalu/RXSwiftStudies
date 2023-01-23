@@ -35,7 +35,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             rootVC = MapsViewController()
         case .Patterns:
             print("Yay patterns")
-            rootVC = MapsViewController()
+            rootVC = MALViewController(viewModel: MALViewModel())
         }
         
         window.rootViewController = rootVC
