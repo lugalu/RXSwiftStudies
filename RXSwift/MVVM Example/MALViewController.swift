@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class MALViewController: UIViewController {
     let viewModel: MALViewModel
@@ -25,9 +27,13 @@ class MALViewController: UIViewController {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         
-        carrousel.delegate = self
-        carrousel.dataSource = self
         carrousel.backgroundColor = .red
+        viewModel.animes.bind(to: carrousel.rx.items(cellIdentifier: "CarrouselCell", cellType: MALCollectionViewCell.self)){ indexPath, title, cell in
+            
+            cell.image = UIImage(systemName: "pencil")
+            
+        }.disposed(by: viewModel.disposeBag)
+        
         self.setupViews()
         
     }
@@ -40,7 +46,7 @@ class MALViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
     }
 }
 

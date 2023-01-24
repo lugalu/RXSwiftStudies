@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import RxSwift
 
 class MALViewModel{
-    let model: MALModel = MALModel()
+    private let model: MALModel = MALModel()
     
+    var animes: PublishSubject<[String]> = PublishSubject()
+    var disposeBag: DisposeBag = DisposeBag()
     
     
 }

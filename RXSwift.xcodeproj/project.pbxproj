@@ -18,7 +18,6 @@
 		09769311297DF8E70018A3D6 /* MALModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09769310297DF8E70018A3D6 /* MALModel.swift */; };
 		09769313297E001E0018A3D6 /* MALCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09769312297E001E0018A3D6 /* MALCollectionViewCell.swift */; };
 		09769315297E06A90018A3D6 /* MALViewController + Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09769314297E06A90018A3D6 /* MALViewController + Constraints.swift */; };
-		09769317297E06C60018A3D6 /* MALViewController + Delegate Data Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09769316297E06C60018A3D6 /* MALViewController + Delegate Data Source.swift */; };
 		09CB5D7D297219420044463D /* Observables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CB5D7C297219420044463D /* Observables.swift */; };
 		09CB5D7F29721A6E0044463D /* Subjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CB5D7E29721A6E0044463D /* Subjects.swift */; };
 		09CB5D81297611AE0044463D /* Relays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CB5D80297611AE0044463D /* Relays.swift */; };
@@ -40,7 +39,6 @@
 		09769310297DF8E70018A3D6 /* MALModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MALModel.swift; sourceTree = "<group>"; };
 		09769312297E001E0018A3D6 /* MALCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MALCollectionViewCell.swift; sourceTree = "<group>"; };
 		09769314297E06A90018A3D6 /* MALViewController + Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MALViewController + Constraints.swift"; sourceTree = "<group>"; };
-		09769316297E06C60018A3D6 /* MALViewController + Delegate Data Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MALViewController + Delegate Data Source.swift"; sourceTree = "<group>"; };
 		09CB5D7C297219420044463D /* Observables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observables.swift; sourceTree = "<group>"; };
 		09CB5D7E29721A6E0044463D /* Subjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subjects.swift; sourceTree = "<group>"; };
 		09CB5D80297611AE0044463D /* Relays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relays.swift; sourceTree = "<group>"; };
@@ -107,7 +105,6 @@
 				09769310297DF8E70018A3D6 /* MALModel.swift */,
 				09769312297E001E0018A3D6 /* MALCollectionViewCell.swift */,
 				09769314297E06A90018A3D6 /* MALViewController + Constraints.swift */,
-				09769316297E06C60018A3D6 /* MALViewController + Delegate Data Source.swift */,
 			);
 			path = "MVVM Example";
 			sourceTree = "<group>";
@@ -248,7 +245,6 @@
 				0976930F297DF8DF0018A3D6 /* MALViewModel.swift in Sources */,
 				09769311297DF8E70018A3D6 /* MALModel.swift in Sources */,
 				094D7155296F7A2000044538 /* MapsViewController.swift in Sources */,
-				09769317297E06C60018A3D6 /* MALViewController + Delegate Data Source.swift in Sources */,
 				09769315297E06A90018A3D6 /* MALViewController + Constraints.swift in Sources */,
 				09CB5D832979FE9A0044463D /* BlackJackViewController.swift in Sources */,
 				0976930D297DF8D30018A3D6 /* MALViewController.swift in Sources */,
