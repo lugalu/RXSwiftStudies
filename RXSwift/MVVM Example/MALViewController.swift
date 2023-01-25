@@ -14,9 +14,17 @@ class MALViewController: UIViewController {
     
     let carrousel: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
+        
+        layout.scrollDirection = .horizontal
+        layout.itemSize = CGSize(width: 225, height: 320)
+        layout.minimumLineSpacing = 16
+        layout.headerReferenceSize = CGSize(width: 50, height: 16)
+        layout.footerReferenceSize = CGSize(width: 50, height: 16)
+        
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         
         collection.translatesAutoresizingMaskIntoConstraints = false
+        
         collection.register(MALCollectionViewCell.self, forCellWithReuseIdentifier: "CarrouselCell")
         
         return collection
@@ -26,16 +34,14 @@ class MALViewController: UIViewController {
     init(viewModel: MALViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-        
-        carrousel.backgroundColor = .red
-        viewModel.animes.bind(to: carrousel.rx.items(cellIdentifier: "CarrouselCell", cellType: MALCollectionViewCell.self)){ indexPath, title, cell in
-            
-            cell.image = UIImage(systemName: "pencil")
+  
+        viewModel.animes.bind(to: carrousel.rx.items(cellIdentifier: "CarrouselCell", cellType: MALCollectionViewCell.self)){ indexPath, anime, cell in
+
+            cell.configure(withImage: anime.image)
             
         }.disposed(by: viewModel.disposeBag)
         
         self.setupViews()
-        
     }
     
     required init?(coder: NSCoder) {
