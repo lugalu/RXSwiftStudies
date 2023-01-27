@@ -30,6 +30,19 @@ class MALViewController: UIViewController {
         return collection
     }()
     
+    let switchLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Switch Color"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    let colorSwitch: UISwitch = {
+        let uiSwitch = UISwitch()
+        uiSwitch.translatesAutoresizingMaskIntoConstraints = false
+        return uiSwitch
+    }()
+    
     
     init(viewModel: MALViewModel) {
         self.viewModel = viewModel
@@ -39,6 +52,14 @@ class MALViewController: UIViewController {
 
             cell.configure(withImage: anime.image)
             
+        }.disposed(by: viewModel.disposeBag)
+        
+        colorSwitch.rx.isOn.subscribe{ [weak self] observer in
+            guard let self else { return }
+            
+            let color = (observer.element ?? true) ?  .tertiarySystemBackground : UIColor.systemBackground
+            self.view.backgroundColor = color
+            self.carrousel.backgroundColor = color
         }.disposed(by: viewModel.disposeBag)
         
         self.setupViews()
