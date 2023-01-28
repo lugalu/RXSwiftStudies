@@ -60,6 +60,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0923FE76298492E50001F041 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		094D7144296F7A2000044538 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +107,7 @@
 		0976930B297DF8A80018A3D6 /* MVVM Example */ = {
 			isa = PBXGroup;
 			children = (
+				0923FE76298492E50001F041 /* Enums */,
 				0976930C297DF8D30018A3D6 /* MALViewController.swift */,
 				0976930E297DF8DF0018A3D6 /* MALViewModel.swift */,
 				09769310297DF8E70018A3D6 /* MALModel.swift */,

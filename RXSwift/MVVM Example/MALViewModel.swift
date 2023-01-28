@@ -10,9 +10,16 @@ import RxSwift
 
 class MALViewModel{
     private let model: MALModel = MALModel()
+    private var cellState: CellState = .simple
     
     var animes: AsyncSubject<[Anime]> = AsyncSubject()
     var disposeBag: DisposeBag = DisposeBag()
+
+    var currentCellState: CellState{
+        get {
+            return cellState
+        }
+    }
     
     init() {
         _ = model.getAnimes()
@@ -23,5 +30,8 @@ class MALViewModel{
             }).disposed(by: disposeBag)
     }
     
+    func changeCellState(){
+        cellState = cellState == .simple ? .complex : .simple
+    }
     
 }

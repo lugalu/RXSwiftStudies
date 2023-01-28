@@ -16,7 +16,7 @@ class MALViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         
         layout.scrollDirection = .horizontal
-        layout.itemSize = CGSize(width: 225, height: 320)
+        layout.itemSize = CGSize(width: 205, height: 285)
         layout.minimumLineSpacing = 16
         layout.headerReferenceSize = CGSize(width: 50, height: 16)
         layout.footerReferenceSize = CGSize(width: 50, height: 16)
@@ -26,6 +26,7 @@ class MALViewController: UIViewController {
         collection.translatesAutoresizingMaskIntoConstraints = false
         
         collection.register(MALCollectionViewCell.self, forCellWithReuseIdentifier: "CarrouselCell")
+        
         
         return collection
     }()
@@ -48,11 +49,29 @@ class MALViewController: UIViewController {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
   
+        self.addSubscribers()
+        
+        self.setupViews()
+    }
+    
+    func addSubscribers(){
         viewModel.animes.bind(to: carrousel.rx.items(cellIdentifier: "CarrouselCell", cellType: MALCollectionViewCell.self)){ indexPath, anime, cell in
 
-            cell.configure(withImage: anime.image)
+            cell.configure(withAnime: anime, state: self.viewModel.currentCellState)
             
         }.disposed(by: viewModel.disposeBag)
+        
+        
+        let tap = UITapGestureRecognizer()
+        
+        tap.rx.event.bind(onNext: {[weak self] event in
+            guard let self else {return}
+            self.viewModel.changeCellState()
+            self.carrousel.reloadData()
+        })
+        .disposed(by: viewModel.disposeBag)
+        
+        carrousel.addGestureRecognizer(tap)
         
         colorSwitch.rx.isOn.subscribe{ [weak self] observer in
             guard let self else { return }
@@ -61,9 +80,9 @@ class MALViewController: UIViewController {
             self.view.backgroundColor = color
             self.carrousel.backgroundColor = color
         }.disposed(by: viewModel.disposeBag)
-        
-        self.setupViews()
     }
+    
+    
     
     required init?(coder: NSCoder) {
         self.viewModel = MALViewModel()
