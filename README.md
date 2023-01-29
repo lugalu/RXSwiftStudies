@@ -1,6 +1,6 @@
 # RXSwiftStudies
 Repository of my RXSwift studies open to anyone.
-Disclaimer the examples, in the specific file types are taken from [this kodeko tutorials](https://www.kodeco.com/books/rxswift-reactive-programming-with-swift/v4.0/chapters/1-hello-rxswift)
+Disclaimer the examples, in the specific file types are taken from [this kodeko chain of tutorials](https://www.kodeco.com/books/rxswift-reactive-programming-with-swift/v4.0/chapters/1-hello-rxswift)
 
 
 ## To-Do:
